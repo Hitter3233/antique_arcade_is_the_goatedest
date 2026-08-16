@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VERY IMPORTANT WEBSITE</title>
+
+    <style>
+        /* =====================================================
+           CHANGE THESE SETTINGS
+           ===================================================== */
+
+        body {
+            /* Background image */
+            background-image: url("background.jpg");
+
+            /* Background settings */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* Change background color if the image doesn't load */
+            background-color: black;
+        }
+
+
+        /* =====================================================
+           GIANT CENTERED MESSAGE
+           ===================================================== */
+
+        .giant-message {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 90%;
+
+            text-align: center;
+
+            font-size: 90px;
+            font-weight: 900;
+
+            color: white;
+
+            /* Extremely unnecessary outline */
+            text-shadow:
+                6px 6px 0 black,
+                -6px -6px 0 black,
+                6px -6px 0 black,
+                -6px 6px 0 black;
+
+            /* Unnecessary animation */
+            animation:
+                rainbow 2s infinite linear;
+        }
+
+
+        /* =====================================================
+           TOP-LEFT SPINNING IMAGE
+           ===================================================== */
+
+        .spinning-image {
+            position: absolute;
+
+            left: 40px;
+            top: 40px;
+
+            width: 180px;
+            height: 180px;
+
+            object-fit: contain;
+
+            animation:
+                bounce 0.7s ease-in-out infinite alternate;
+        }
+
+
+        /* =====================================================
+           FLASHING TEXT
+           ===================================================== */
+
+        .flashing-text {
+            position: absolute;
+
+            bottom: 50px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-size: 15px;
+            font-weight: bold;
+
+            color: yellow;
+
+            text-shadow:
+                3px 3px black,
+                -3px -3px black;
+
+            animation: flash 1s infinite;
+        }
+
+
+        /* =====================================================
+           RANDOM FLOATING OBJECTS
+           ===================================================== */
+
+        .floating {
+            position: absolute;
+
+            font-size: 70px;
+
+            animation:
+                float 3s ease-in-out infinite,
+                spin 4s linear infinite;
+        }
+
+        .one {
+            left: 10%;
+            top: 15%;
+        }
+
+        .two {
+            right: 10%;
+            top: 20%;
+
+            animation-delay: 0.5s;
+        }
+
+        .three {
+            left: 15%;
+            bottom: 15%;
+
+            animation-delay: 1s;
+        }
+
+        .four {
+            right: 15%;
+            bottom: 20%;
+
+            animation-delay: 1.5s;
+        }
+
+
+        /* =====================================================
+           UNNECESSARY ANIMATIONS
+           ===================================================== */
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        @keyframes bounce {
+            from {
+                margin-top: 0px;
+            }
+
+            to {
+                margin-top: 50px;
+            }
+        }
+
+
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes shake {
+            0% {
+                margin-left: 0px;
+            }
+
+            25% {
+                margin-left: 5px;
+            }
+
+            50% {
+                margin-left: -5px;
+            }
+
+            75% {
+                margin-left: 5px;
+            }
+
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            20% {
+                color: yellow;
+            }
+
+            40% {
+                color: lime;
+            }
+
+            60% {
+                color: cyan;
+            }
+
+            80% {
+                color: magenta;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-50px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(360deg);
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .giant-message {
+                font-size: 35px;
+            }
+
+            .spinning-image {
+                width: 100px;
+                height: 100px;
+
+                left: 20px;
+                top: 20px;
+            }
+
+            .flashing-text {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP-LEFT SPINNING IMAGE
+
+         Change "funny-image.png" to whatever image
+         you want to use.
+         ===================================================== -->
+
+<a
+    href="https://www.youtube.com/antiquearcade"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <img
+        class="spinning-image"
+        src="funny-image.png"
+        alt="Click me"
+    >
+</a>
+
+
+    <!-- =====================================================
+         GIANT CENTER MESSAGE
+
+         CHANGE THIS TEXT
+         ===================================================== -->
+
+    <div class="giant-message">
+        Antique Arcade<br>
+        !!!Is The Goatedes!!!
+    </div>
+
+
+    <!-- =====================================================
+         FLASHING BOTTOM TEXT
+        Replace !¡! with anything
+         CHANGE THIS TEXT
+         ===================================================== -->
+
+    <div class="flashing-text">
+        !¡!
+    </div>
+
+
+    <!-- =====================================================
+         COMPLETELY UNNECESSARY FLOATING EMOJIS input emoji in between > and </div
+         ===================================================== -->
+
+    <div class="floating one">🐐</div>
+
+    <div class="floating two">🐐</div>
+
+    <div class="floating three">🐐</div>
+
+    <div class="floating four">🐐</div>
+
+
+</body>
+</html>
